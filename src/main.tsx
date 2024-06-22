@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Booking, bookingLoader } from "./ routes/booking";
-import { Root, rootLoader } from "./ routes/root";
+import { Booking, bookingAction, bookingLoader } from "./routes/booking";
+import { Root, rootLoader } from "./routes/root";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +16,7 @@ const router = createBrowserRouter([
         path: "booking",
         element: <Booking />,
         loader: bookingLoader,
+        action: bookingAction,
       },
     ],
   },
